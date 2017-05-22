@@ -1,0 +1,91 @@
+body {
+	background: url("https://blackrockdigital.github.io/startbootstrap-clean-blog/img/post-bg.jpg") no-repeat top;
+	font-family: 'Lora', serif;	
+	font-size: 20px;
+}
+
+.navbar-brand, .navbar-nav, h1, h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-brand, .navbar-nav, h1 {
+	font-weight: 800;
+	color: #fff;
+}
+
+.navbar .navbar-nav > li > a {
+	color: #fff;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding: 20px;
+}
+
+.navbar-header a {
+	padding: 20px;
+}
+
+.navbar .navbar-brand:focus,
+.navbar .navbar-brand:hover,
+.navbar .navbar-nav > li > a:focus,
+.navbar .navbar-nav > li > a:hover {
+    color: rgba(255,255,255,.8);
+    background-color: transparent;
+}
+
+header {
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+header .row {
+	padding: 150px 0 120px 0;
+}
+
+a, body {
+	color: #333;
+}
+
+p {
+	margin: 30px 0;
+}
+
+p > a {
+	text-decoration: underline;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 55px;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 600;
+	}
+
+h3 {
+	font-size: 36px;
+	font-weight: 700;
+	margin-top: 60px;
+}
+
+.caption {
+	font-size: 14px;
+	font-style: italic;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+}
+
+footer {
+	padding: 50px 0;
+}
+
+footer p {
+	font-size: 14px;
+	text-align: center;
+}
