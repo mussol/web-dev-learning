@@ -1,12 +1,14 @@
-var request = require("request");
+const request = require("request");
 
-function getLocation () {
-	request('http://ipinfo.io', function(err, res, body) {
+function getLocation (callback) {
+	request('http://ipinfo.io', function(err, response, body) {
 		if (!err && response.statusCode == 200) {
-			return JSON.parse(body);
+			let loc = JSON.parse(body);
+			callback(loc);
+		} else {
+			console.log('An error occurred in getLocation func: ', err);
 		}
 	});
 };
-
 
 module.exports = getLocation;
