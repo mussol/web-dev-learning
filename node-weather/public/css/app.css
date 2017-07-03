@@ -1,0 +1,21 @@
+body {
+	padding-top: 50px;
+	background-color: orange;
+}
+
+span {
+	padding: 0 10px 0 10px;
+}
+
+img {
+	padding: 30px;
+}
+
+#temp {
+	font-size: 4.5em;
+	display: inline-block;
+}
+
+#desc {
+	font-size: 1.5em;
+}

@@ -3,20 +3,74 @@
 <head>
     <meta charset="utf-8">
     <title>Weather App</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <!--Semantic UI styles-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+    <!--Custon styles-->
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
 </head>
 <body>
-    <div class="container">
-    	<h1>The current weather in <%=data.loc%></h1>
-		<img src="<%=data.icon_url%>">
-		<p><%=data.desc%></p>
-		<%var unit = data.units === "metric" ? unit="C" : unit="F"%>
-		<span><%=data.temp%>&deg;<%=unit%></span>
-		<span>Min <%=data.temp_min%></span>
-		<span>Max <%=data.temp_max%></span>
-		<p>Humidity <%=data.humidity%>%</p>
-		<p>Wind <%=data.wind%>m/s</p>
+    <div class="ui raised padded text container segment">
+		<div class="ui header">Current weather in ... </div>
+    	<div class="ui centered huge blue header"><%=data.loc%></div>
+	    <div class="ui centered grid container">
+			<div class="ui grid">
+				<div class="centered row">
+					<%var unit = data.units === "metric" ? unit="C" : unit="F"%>
+					<span id="temp"><%=data.temp%>&deg;<%=unit%></span>
+					<img src="<%=data.icon_url%>">
+				</div><!--.row-->
+				<div class="centered row" id="desc">
+					<p><%=data.desc%></p>
+				</div><!--.row-->
+				<div class="two column row">
+					<div class="column">
+						<span>Min <%=data.temp_min%></span>
+					</div>
+					<div class="column">
+						<span>Humidity <%=data.humidity%>%</span>
+					</div>
+				</div><!--.row-->
+				<div class="two column row">
+					<div class="column">
+						<span>Max <%=data.temp_max%></span>
+					</div>
+					<div class="column">
+						<span>Wind <%=data.wind%>m/s</span>
+					</div>
+				</div><!--.row-->
+			</div><!--.column.grid-->
+	    </div><!--.grid.container-->
     </div>
+
+    <!--
+	<div class="ui raised very padded text container segment">
+	    <div>
+    		<h2 class="ui header">Current weather in ... 
+	    		<h1 class="ui centered huge blue header"><%=data.loc%></h1>
+	    	</h2>
+    	</div>
+	    <div class="ui grid container">
+			<div class="ui very relaxed items">
+				<div class="item">
+					<%var unit = data.units === "metric" ? unit="C" : unit="F"%>
+					<div class="middle aligned content">
+						<div class="header">
+							<%=data.temp%>&deg;<%=unit%>
+						</div>
+					</div>
+					<div class="ui small left floated image">
+						<img src="<%=data.icon_url%>">
+					</div>
+				</div>
+			</div>
+			
+			<p><%=data.desc%></p>
+			<span>Min <%=data.temp_min%></span>
+			<span>Max <%=data.temp_max%></span>
+			<span>Humidity <%=data.humidity%>%</span>
+			<span>Wind <%=data.wind%>m/s</span>
+	    </div>
+    </div>
+    -->
 </body>
 </html>
