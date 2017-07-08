@@ -9,37 +9,54 @@
     <link rel="stylesheet" type="text/css" href="/css/app.css">
 </head>
 <body>
-    <div class="ui raised padded text container segment">
-		<div class="ui header">Current weather in ... </div>
-    	<div class="ui centered huge blue header"><%=data.loc%></div>
-	    <div class="ui centered grid container">
-			<div class="ui grid">
-				<div class="centered row">
-					<%var unit = data.units === "metric" ? unit="C" : unit="F"%>
-					<span id="temp"><%=data.temp%>&deg;<%=unit%></span>
+    <div class="ui raised very padded text container segment">
+		<div class="ui centered grid container">
+			<div class="ui middle aligned stackable grid">
+				
+				<div class="left aligned sixteen wide column">
+					<div class="ui header">Current weather in ... </div>
+				</div>
+
+				<div class="sixteen wide column">
+					<div class="ui centered huge blue header"><%=data.loc%></div>
+				</div>
+				<div class="four wide column">
 					<img src="<%=data.icon_url%>">
-				</div><!--.row-->
-				<div class="centered row" id="desc">
+				</div>
+				<div class="eight wide column">
+					<%var unit = data.units === "metric" ? unit="C" : unit="F"%>
+					<span id="temp"><span id="degrees"><%=data.temp%></span>&deg;<span id="unit"><%=unit%></span></span>
+				</div>
+
+				<div class="four wide column">
+					<div class="ui buttons">
+						<button id="cButton" class="ui active button">&deg;C</button>
+						<button id="fButton" class="ui button">&deg;F</button>
+					</div>
+				</div>
+				<div class="sixteen wide column" id="desc">
 					<p><%=data.desc%></p>
 				</div><!--.row-->
-				<div class="two column row">
-					<div class="column">
-						<span>Min <%=data.temp_min%></span>
-					</div>
-					<div class="column">
-						<span>Humidity <%=data.humidity%>%</span>
-					</div>
-				</div><!--.row-->
-				<div class="two column row">
-					<div class="column">
-						<span>Max <%=data.temp_max%></span>
-					</div>
-					<div class="column">
-						<span>Wind <%=data.wind%>m/s</span>
-					</div>
-				</div><!--.row-->
+
+				<div class="eight wide column">
+					<span>Min <%=data.temp_min%></span>
+				</div>
+				<div class="eight wide column">
+					<span>Humidity <%=data.humidity%>%</span>
+				</div>
+
+				<div class="eight wide column">
+					<span>Max <%=data.temp_max%></span>
+				</div>
+				<div class="eight wide column">
+					<span>Wind <%=data.wind%>m/s</span>
+				</div>
+
 			</div><!--.column.grid-->
 	    </div><!--.grid.container-->
     </div>
+
+<script type="text/javascript" src="../conversion.js"></script>
+
 </body>
 </html>
