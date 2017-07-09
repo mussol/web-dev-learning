@@ -1,7 +1,6 @@
 //imports
 const express = require('express'),
 	  request = require('request'),
-	  bodyParser = require('body-parser'),
 	  weather = require('./weather.js'),
 	  location = require('./location.js');
 
@@ -10,9 +9,6 @@ const app = express();
 
 //expose the public folder
 app.use(express.static('public'));
-
-//so we can make use of the req.body object
-app.use(bodyParser.urlencoded({ extended: true }));
 
 //set up template engine
 app.set('view engine', 'ejs');
