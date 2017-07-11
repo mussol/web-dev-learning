@@ -3,12 +3,16 @@ const request = require("request");
 //access to the API key
 require('dotenv').config();
 
+
 function getWeather (location, callback) {
-	let city = location.city; //"Barcelona"; //req.body.city;
-	let country = location.country; //"ES" //ISO 3166 country codes //req.body.country;
+	// let lat = location.lat;
+	// let lon = location.lon;
+	let city = location.city;
+	let country = location.countryCode; //ISO 3166 country codes
 	let units = "metric"; // Celsius: "metric", Fahrenheit: "imperial"
 	let key = process.env.apiKey;
 	let url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=${units}&appid=${key}`; //using template literals
+	// let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${key}`;
 	request(url, function(err, response, body) {
 		if (!err && response.statusCode == 200) {
 			let data = JSON.parse(body);
