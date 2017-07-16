@@ -1,26 +1,17 @@
 const request = require("request");
-// const geolocation = require('geolocation');
 
-function getLocation (callback) {
-	request('http://ip-api.com/json', function(err, response, body) {
+function getLocation (ip, callback) {
+	request(`http://ip-api.com/json/${ip}`, function(err, response, body) {
 		if (!err && response.statusCode == 200) {
 			let loc = JSON.parse(body);
+			if (loc.lat === undefined || loc.lon === undefined) {
+				console.log('Could not get latitude/longitude. Client\'s IP address might be blocked.');
+			}
 			callback(loc);
 		} else {
-			console.log('An error occurred in getLocation func: ', err);
+			console.log('Sorry, could not get location. Error: ', err);
 		}
 	});
 };
-
-
-// Alternative (not working):
-// function getLocation(callback) {
-// 	geolocation.getCurrentPosition (function (err, position) {
-// 		if (err) {
-// 			console.log("Geolocation is not supported by this browser.");
-// 		}
-// 		callback(position.coords);
-// 	});
-// };
 
 module.exports = getLocation;
