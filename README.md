@@ -1,11 +1,11 @@
 # web-dev-learning
 ##### Learning playground for apps
 
-## Clone of a bootstrap blog article page
+## Clone of a bootstrap blog article page [live page](http://clean-blog-clone.surge.sh/StartBT-clean-blog)
 
 html, css, bootstrap
 
-## Weather app created in node.js
+## Weather app created in node.js [live app](https://weather-mussol.herokuapp.com/)
 
 node, express, request, api, js, ejs, css, semantic ui
 
