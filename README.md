@@ -1,13 +1,13 @@
 # web-dev-learning
 ##### Learning playground for apps
 
-## Clone of a bootstrap blog article page [live page](http://clean-blog-clone.surge.sh/StartBT-clean-blog)
+## Clone of a bootstrap blog article page
 
-html, css, bootstrap
+html, css, bootstrap  |  [live page](http://clean-blog-clone.surge.sh/StartBT-clean-blog)
 
-## Weather app created in node.js [live app](https://weather-mussol.herokuapp.com/)
+## Weather app created in node.js
 
-node, express, request, api, js, ejs, css, semantic ui
+node, express, request, api, js, ejs, css, semantic ui  |  [live app](https://weather-mussol.herokuapp.com/)
 
 FreeCodeCamp Intermediate Front End Development Project [Show the Local Weather](https://www.freecodecamp.org/challenges/show-the-local-weather)
 - [x] User Story: I can see the weather in my current location.
