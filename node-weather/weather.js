@@ -25,7 +25,7 @@ function getWeather (location, callback) {
 				units: units
 		    });
 		} else {
-			console.log('Could not get weather info for this location. Error: ', err);
+			console.log('Could not get weather info for this location. Error:', err);
 		}
 	});
 };
