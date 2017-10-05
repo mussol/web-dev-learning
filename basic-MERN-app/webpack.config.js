@@ -2,9 +2,9 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './app.js', //entry point
+    entry: './client/index.js', //entry point
     output: {
-        path: __dirname,
+        path: path.join(__dirname, 'client'),
         filename: 'bundle.js'
     },
     module: { //instructions for transpiling
