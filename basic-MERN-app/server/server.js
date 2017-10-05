@@ -16,7 +16,7 @@ app.engine('html', function (path, options, callbacks) {
 });
 
 // Middleware //
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, '../client')));
 
 // Use routes //
 app.use('/', indexRoutes);
