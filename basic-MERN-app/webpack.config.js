@@ -1,11 +1,11 @@
 var path = require('path');
-var webpack = required('webpack');
+var webpack = require('webpack');
 
 module.exports = {
     entry: './app.js', //entry point
     output: {
         path: __dirname,
-        filename: bundle.js
+        filename: 'bundle.js'
     },
     module: { //instructions for transpiling
         loaders: [{
