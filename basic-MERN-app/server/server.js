@@ -4,7 +4,7 @@ var fs = require('fs'); //handle files
 var express = require('express');
 
 // Imports //
-var indexRoutes = require('routes/index');
+var indexRoutes = require('./routes/index');
 
 // Create app //
 var app = express();
