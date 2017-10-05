@@ -26,8 +26,4 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500); //either err's status or 500 = server error
 });
 
-// Serve app //
-var port = 8000;
-app.listen(port, function () {
-    console.log('Running at localhost:' + port);
-});
+module.exports = app;
