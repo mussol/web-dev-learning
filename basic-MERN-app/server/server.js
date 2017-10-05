@@ -3,6 +3,9 @@ var path = require('path');
 var fs = require('fs'); //handle files
 var express = require('express');
 
+// Imports //
+var indexRoutes = require('routes/index');
+
 // Create app //
 var app = express();
 
@@ -15,10 +18,8 @@ app.engine('html', function (path, options, callbacks) {
 // Middleware //
 app.use(express.static(__dirname));
 
-// Routes //
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+// Use routes //
+app.use('/', indexRoutes);
 
 // Error handler //
 app.use(function (err, req, res, next) {
