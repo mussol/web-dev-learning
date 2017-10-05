@@ -8,4 +8,5 @@ class App extends React.Component {
     }
 }
 
+//the above App component will be attached to the div element #app in index.html
 ReactDOM.render(<App />, document.getElementById('app'));
